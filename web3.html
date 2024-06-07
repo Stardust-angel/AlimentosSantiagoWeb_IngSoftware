@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Alimentos Santiago</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script>
+        function CrearPedido(){
+            let seleccion1 = document.getElementById("Bebida").value;
+            let seleccion2 = document.getElementById("Plato1").value;
+            let seleccion3 = document.getElementById("Plato2").value;
+            let seleccion4 = document.getElementById("Postre").value;
+
+            let Pedido=[]
+
+            Pedido.push(seleccion1,seleccion2,seleccion3,seleccion4);
+            alert("***Su pedido***" + "\n" +
+                "Selección de bebida: " + seleccion1 + "\n" +
+                  "Selección de plato principal: " + seleccion2 + "\n" +
+                  "Selección de plato aperitivo: " + seleccion3 + "\n" +
+                  "Selección de postre: " + seleccion4);
+
+
+        }
+
+    </script>
+</head>
+<body style="background-color: cadetblue;">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Alimentos Santiago</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="web.html" aria-current="page"  >Iniciar sesion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="web2.html" aria-current="page"  >Ver catalogo</a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <table align="center" style="width: 25%; height: 35%; background-color:aliceblue; " border="1">
+        <tr>
+            <td align="center"><strong>Su pedido</strong></td>
+        </tr>
+        <tr>
+            <td align="center">Bebida: <select id="Bebida" name="Bebida"> 
+                <option value="Ninguno">Ninguno</option> 
+                <option value="Coca Cola 350ml">Coca Cola 350ml</option> 
+                <option value="Sprite 350ml">Sprite 350ml</option> 
+            </select></td>
+        </tr>
+        <tr>
+            <td align="center">Plato principal: 
+                <select id="Plato1" name="Plato1"> 
+                    <option value="Ninguno">Ninguno</option> 
+                    <option value="Plato principal del dia">Plato principal del dia</option> 
+                </select></td>
+        </tr>
+        <tr>
+            <td align="center">Plato aperitivo: 
+                <select id="Plato2" name="Plato2"> 
+                    <option value="Ninguno">Ninguno</option> 
+                    <option value="Plato aperitivo del dia">Plato aperitivo del dia</option> 
+                </select></td>
+        </tr>
+        <tr>
+            <td align="center">Postre: <select id="Postre" name="Postre"> 
+                <option value="Ninguno">Ninguno</option> 
+                <option value="Postre del dia">Postre del dia</option> 
+            </select></td>
+        </tr>
+        
+        <tr>
+            <td align="center">
+                <input type="button" value="Pagar" onclick="CrearPedido()">
+            </td>
+        </tr>
+        
+    </table>
+
+
+</body>
+</html>
